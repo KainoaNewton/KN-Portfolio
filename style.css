@@ -548,6 +548,58 @@ body {
 	z-index: -10;
 }
 
+#projects {
+	width: 92vw;
+	margin-left: 4vw;
+	margin-top: 20%;
+	display: grid;
+	grid-template-columns: 46vw 46vw;
+	grid-template-rows: min-content 100vh 100vh 100vh;
+	grid-template-areas:
+		"projects-title projects-title"
+		"projects-texts project-1"
+		"projects-texts project-2"
+		"projects-texts project-3";
+}
+
+#projects-texts {
+	display: grid;
+	padding-right: 16vw;
+	position: relative;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-areas: "project-text-1" "project-text-2" "project-text-3";
+}
+
+.project-text {
+	position: sticky;
+	top: 0;
+	padding-top: 4%;
+}
+
+.project-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid green;
+}
+
+.project-content {
+	border: 1px solid red;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 65%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.project-content iframe {
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
 #skills {
 	display: block;
 	width: 100%;
@@ -559,7 +611,7 @@ body {
 	position: absolute;
 	top: 100vh;
 	width: 100%;
-	height: 240vh;
+	height: 500vh;
 	background-color: var(--bg-primary);
 	z-index: -9;
 }
